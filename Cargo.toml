@@ -1,0 +1,23 @@
+[package]
+name = "your_crate"
+version = "0.1.0"
+authors = ["You"]
+edition = "2024"
+description = "Crate short description"
+documentation = "https://docs.rs/your_crate"
+repository = "https://github.com/you/your_crate"
+license = "BSD-3-Clause"
+keywords = []
+categories = []
+
+[lints.clippy]
+complexity = "warn"
+perf = "warn"
+style = "warn"
+pedantic = "warn"
+
+# Remove the following if your crate is a library
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1

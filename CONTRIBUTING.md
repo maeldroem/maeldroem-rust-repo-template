@@ -77,3 +77,7 @@ Be as descriptive as you can. Ideally your bug report should include:
 ## Code formatting
 
 See [the CODE_FORMATTING file](CODE_FORMATTING.md).
+
+## Workflow
+
+See [the WORKFLOW file](WORKFLOW.md).

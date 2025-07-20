@@ -53,6 +53,7 @@ Edit your `~/.gitconfig` to include the following.
 	rb = rebase
 	p = push
 	pf = push --force-with-lease
+	pt = push --tags
     # Creates a branch and switches to it
 	swc = switch -c
     # Pushes origin
@@ -192,6 +193,8 @@ Since we don't provide the `-m` option, this command will open your chosen text 
 When naming the tag, follow [the same rules as for commits](#commits): The name/title should be short,
 but the description should be explicit, explaining what the tag is about, and if it is for a version or milestone,
 should include the changelog for this version/milestone.
+
+Don't forget to use `git push --tags` to push your tags.
 
 ### Versioning scheme
 

@@ -196,6 +196,9 @@ should include the changelog for this version/milestone.
 
 Don't forget to use `git push --tags` to push your tags.
 
+Regarding releases, use GitHub's tool for that. Don't forget to detail what your release is about, adding the changelog
+and so on. But this time you can use Markdown!
+
 ### Versioning scheme
 
 Generally, you should follow [Semantic Versioning 2.0](https://semver.org/spec/v2.0.0.html), unless your project

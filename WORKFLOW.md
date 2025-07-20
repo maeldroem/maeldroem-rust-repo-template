@@ -61,6 +61,7 @@ Edit your `~/.gitconfig` to include the following.
 	sswc = !sh -c 'git stash && git switch -c $1 && git stash pop' -
 	# Stashes changes, switches to a branch, then pops the stash
 	ssw = !sh -c 'git stash && git switch $1 && git stash pop' -
+	t = tag -a
 ```
 
 ### Commits
@@ -173,3 +174,38 @@ Keep the title short, reserve the description for the details. Use Markdown at y
 PR description!
 
 See ["Creating a PR" section of CONTRIBUTING.md](CONTRIBUTING.md#creating-a-pr) for more details.
+
+### Tags and releases
+
+Tags should be used to track versions but also milestones. Both milestones and versions are similar in concept, it
+just depends on how you define the two.
+
+For version tags, usually they should be named like your version, prefixed with `v` (e.g. `v1.2.3`).
+As for milestones, they can be named like `milestone_cool_things_this_time` (`milestone_` being the prefix).
+
+Version tags should generally tag a commit on the `main` branch. As for milestones, either `main` or `dev`.
+
+When creating a tag, use `git tag -a v1.2.3 <commit>` (you can omit `<commit>` if the `HEAD` is already the commit
+you wish to tag).
+Since we don't provide the `-m` option, this command will open your chosen text editor for you to name the tag.
+
+When naming the tag, follow [the same rules as for commits](#commits): The name/title should be short,
+but the description should be explicit, explaining what the tag is about, and if it is for a version or milestone,
+should include the changelog for this version/milestone.
+
+### Versioning scheme
+
+Generally, you should follow [Semantic Versioning 2.0](https://semver.org/spec/v2.0.0.html), unless your project
+is subject to change on a regular basis, mainly due to subjects related to time (e.g. laws, timezones, standards,
+as they all can change on some interval of time), in which case you should use [Calendar Versioning](https://calver.org/).
+
+Sometimes the choice is ambiguous, sometimes both of those versioning schemes may not fit. It is up to the maintainers
+to choose the versioning scheme they choose to use.
+
+## Code
+
+Obviously, you should follow [the code formatting rules](CODE_FORMATTING.md).
+But there's also additional rules on coding that you should generally follow.
+
+Warnings should be considered like errors, even if it's a warning with low priority, such as warnings from the
+`pedantic` group of lints of `clippy`. Warnings shouldn't be ignored and should be resolved as much as possible.

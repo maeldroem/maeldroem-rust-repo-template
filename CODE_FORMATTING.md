@@ -182,6 +182,12 @@ fn complex_computing_of_life_amount(a: u32, x: f64, y: f64, z: f64) -> u32 {
 }
 ```
 
+Regarding `impl` order, it is not strictly enforced. That is to say that sometimes, it is better to put more detailed
+implementations above certain less detailed ones. Moreover, when a trait is defined in a module, implementations of
+such traits can also be present under the trait itself instead of under the definition of the implementor.
+
+This is more a matter of best judgment.
+
 ### If you have ideas, suggestions, or ideas for improvement, leave a comment
 
 Use a code comment and prefix it with the prefix that fits most: `// TODO:`, `// NOTE:`, `// IDEA:`. Please restrict yourself to those prefixes in order to simplify search for those comments in the future.
